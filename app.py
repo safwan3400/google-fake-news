@@ -1,6 +1,5 @@
 from flask import Flask, abort, jsonify, request, render_template
 import joblib
-from feature import *
 import json
 import os
 import webbrowser
