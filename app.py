@@ -18,7 +18,7 @@ def get_delay():
 	query_text = result['maintext']
 	lol = query_title + " " + query_author + " " + query_text
 	link =	'https://factchecktools.googleapis.com/v1alpha1/claims:search?query=' + str(lol) + '&key=AIzaSyAKjLlNdhqE_bjTbFRybC7yXR_7ht0ZspA'
-	return webbrowser.open("https://google-fake-news.herokuapp.com/")
+	return os.system(link)
 
 
 
