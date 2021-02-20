@@ -1,7 +1,6 @@
 from flask import Flask, abort, jsonify, request, render_template
 import json
-import os
-import webbrowser
+import urllib
 
 app = Flask(__name__)
 
@@ -18,7 +17,7 @@ def get_delay():
 	query_text = result['maintext']
 	lol = query_title + " " + query_author + " " + query_text
 	link =	'https://factchecktools.googleapis.com/v1alpha1/claims:search?query=' + str(lol) + '&key=AIzaSyAKjLlNdhqE_bjTbFRybC7yXR_7ht0ZspA'
-	return webbrowser.open_new_tab(link)
+	return urllib.urlopen(link)
 
 
 
